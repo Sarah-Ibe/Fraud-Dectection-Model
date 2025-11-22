@@ -3,6 +3,9 @@
 This project focuses on the critical domain of fraud detection within transactional data. Specifically, my objective is to leverage various transaction and user attributes to predict the fraud rate for individual users. This is based on the same dataset as the fraud detection dashboard
 
 The overall goal of this notebook is to develop and evaluate machine learning models capable of accurately forecasting these fraud rates, thereby enhancing security measures and potentially mitigating financial losses.
+# Tools used
+1. Python- Sklearn, numpy, pandas, matplotlib, seaborn
+2. Google Collab
 
 # Data Loading and Initial Exploration
 To begin our analysis, the dataset was loaded from the file 'Fraud Detection Dataset.csv' into a pandas DataFrame, which we named data. During this loading process, the 'Transaction_ID' column was designated as the index for the DataFrame, providing a unique identifier for each transaction.
