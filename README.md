@@ -83,18 +83,24 @@ Need for More Influential Features: The results highlight a critical need for ei
 
 # Data Analysis Key Findings
 Data Loading and Initial Exploration: The dataset was loaded from 'Fraud Detection Dataset.csv', using 'Transaction_ID' as the index. Initial exploration through data.head(10) and data.info() helped to understand the data structure and identify missing values, which were subsequently addressed.
+
 Data Preprocessing:
 Missing values were handled by imputing categorical columns with their mode and numerical columns with their mean.
 A new target variable, fraud_rate, was created by calculating the mean of the Fraudulent column grouped by User_ID, transforming the problem into a regression task. The original Fraudulent column was then dropped.
+
 Categorical features were converted into numerical dummy variables using one-hot encoding with drop_first=True to prevent multicollinearity.
 Numerical features were standardized using StandardScaler to ensure all features contributed equally to model training.
+
 Exploratory Data Analysis (EDA):
 Correlation analysis was performed, including the computation of a correlation matrix and specific correlations with the fraud_rate target.
 A heatmap was used for a visual representation of the correlation matrix, and a scatter plot of 'Previous_Fraudulent_Transactions' vs. fraud_rate indicated a non-linear relationship.
+
 Model Performance:
 The Decision Tree Regressor yielded a Mean Squared Error (MSE) of approximately 0.003777 and an R-squared (R2) score of -0.006517. The negative R2 score indicates that this model performs worse than simply predicting the mean fraud_rate.
 The Random Forest Regressor showed a slight improvement with an MSE of approximately 0.003602 and an R2 score of 0.039961. While positive, this R2 score is very low, explaining only about 4% of the variance in the fraud_rate.
+
 Challenges Identified: The consistently low R2 scores across both models, combined with initial correlation analysis, suggest a weak relationship between the existing features and the target fraud_rate, indicating limited predictive power from the current dataset.
+
 Insights or Next Steps
 Enhance Feature Engineering: Given the limited predictive power of current models, the next steps should focus on advanced feature engineering, including exploring interaction effects, temporal patterns (e.g., transaction frequency over time), and deriving new domain-specific features that might better capture complex fraud behaviors.
 Explore Alternative Data and Models: Integrate external data sources such as user behavior logs, device intelligence, or geographical risk factors. Simultaneously, investigate more sophisticated machine learning algorithms like Gradient Boosting models (XGBoost, LightGBM, CatBoost) or deep learning techniques, which are better equipped to handle complex, non-linear relationships and potentially improve model performance significantly.
