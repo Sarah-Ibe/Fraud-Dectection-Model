@@ -5,7 +5,7 @@ This project focuses on the critical domain of fraud detection within transactio
 The overall goal of this notebook is to develop and evaluate machine learning models capable of accurately forecasting these fraud rates, thereby enhancing security measures and potentially mitigating financial losses.
 # Tools used
 1. Python- Sklearn, numpy, pandas, matplotlib, seaborn
-2. Google Collab
+2. Google Colab- https://colab.research.google.com/drive/1cneXBRXLKpDf26gKCXaiNeJmB_iQgBtq
 
 # Data Loading and Initial Exploration
 To begin our analysis, the dataset was loaded from the file 'Fraud Detection Dataset.csv' into a pandas DataFrame, which we named data. During this loading process, the 'Transaction_ID' column was designated as the index for the DataFrame, providing a unique identifier for each transaction.
@@ -108,3 +108,4 @@ Insights or Next Steps
 Enhance Feature Engineering: Given the limited predictive power of current models, the next steps should focus on advanced feature engineering, including exploring interaction effects, temporal patterns (e.g., transaction frequency over time), and deriving new domain-specific features that might better capture complex fraud behaviors.
 Explore Alternative Data and Models: Integrate external data sources such as user behavior logs, device intelligence, or geographical risk factors. Simultaneously, investigate more sophisticated machine learning algorithms like Gradient Boosting models (XGBoost, LightGBM, CatBoost) or deep learning techniques, which are better equipped to handle complex, non-linear relationships and potentially improve model performance significantly.
 
+Check out classification models built using this dataset- https://colab.research.google.com/drive/13bg4-MfJs83E6LQF8CFS2PSB2g5ZV1lO?usp=sharing
